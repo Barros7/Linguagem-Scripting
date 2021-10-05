@@ -16,6 +16,6 @@ Por  exemplo -cada  registo  de  base de dados  corresponderia  a  uma  linha de
 * Tipo do automovel (os tipos devem ser definidos num ficheiro a parte : SUV, Vintage, Sedam etc)
 * Preço de compra(um inteiro em Euros) do automóvel usado
 * Data da compra do automóvel
-* Custo de restauro e valorização
+* Custo de restauro e valorização;
 * Preço de venda(um inteiro em Euros) doautomóvel ao cliente
 * Data da vendado automóvel. 
