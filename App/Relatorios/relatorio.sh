@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
-#============ Chamar o ficheiro de Compra ============
+
+#========================= Limpar Tel ================================
+Clear
+#============ Chamar o ficheiro Listar veículos comprados ============
 
     Compra(){
         ../Compras/compra.sh
     }
 
-#============ Chamar o ficheiro de venda =============
+#============ Chamar o ficheiro Listar veículos vendidos =============
 
     Venda(){
         ../Vendas/venda.sh
     }
 
-#============ Chamar o ficheiro de Stock =============
+#============ Chamar o ficheiro Listar veículos em Stock =============
 
     Stock(){
         ..Stocks/stock.sh
@@ -31,12 +34,14 @@ Relatorio(){
     echo " 1 - Listar veículos comprados  "
     echo " 2 - Listar veículos vendidos   "
     echo " 3 - Listar veículos em Stock   "
+    echo " 0 - Sair do Programa           "
     read opcao2
 
-    case $opcao2 in
-        1) Listar veículo comprados
-        2) Listar veículos vendidos
-        3) Listar veículos em Stock
+    case $opcao2 in             #============ Estamos a pensar como vai ser ================
+        1) Listar_veiculo_comprados ;;
+        2) Listar_veiculos_vendidos ;; 
+        3) Listar_veiculos_em_Stock ;;
+        0) Sair ;;
     esac
 }
 Relatorio ""
