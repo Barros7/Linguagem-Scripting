@@ -1,0 +1,2 @@
+Duvidas: 
+Menu alterar dados e alterar preço de restauro de dados. Parece-nos ser a mesma coisa.
