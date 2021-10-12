@@ -54,4 +54,22 @@ Sair(){
          6) Relatorios ;;
          7) SGBD ;;
          0) break ;;
+<<<<<<< HEAD
     esac
+=======
+    esac
+
+
+
+#============ Função do Menu_Iniciar ============
+    
+  
+
+#============ Função do Menu para criar Backup dos dados ============
+
+#============ Função para fazer o Restauro dos dados ============
+
+#============ Função para executar o programa ==============
+
+
+>>>>>>> 9eb368a5f907ce8b560a8aa190d67ddc59bbe757

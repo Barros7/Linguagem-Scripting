@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Duvidas: 
 Menu alterar dados e alterar preço de restauro de dados. Parece-nos ser a mesma coisa.
 
@@ -50,3 +51,7 @@ Sair(){​​​
     Clear
     exit
 }​​​
+=======
+Duvidas: 
+Menu alterar dados e alterar preço de restauro de dados. Parece-nos ser a mesma coisa.
+>>>>>>> 9eb368a5f907ce8b560a8aa190d67ddc59bbe757
