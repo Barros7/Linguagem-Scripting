@@ -2,7 +2,7 @@
 
 
 #========================= Limpar Tel ================================
-Clear
+
 #============ Chamar o ficheiro Listar veículos comprados ============
 
     Compra(){
@@ -21,7 +21,7 @@ Clear
         ..Stocks/stock.sh
     }
 
-#============ Funçao para Sair do programa ============
+#=========== Funçao para Sair do programa ============
 
     Sair(){
         Clear
@@ -31,6 +31,7 @@ Clear
 #============ Função do menu Relatório ================
 
 Relatorio(){
+    Clear
     echo " 1 - Listar veículos comprados  "
     echo " 2 - Listar veículos vendidos   "
     echo " 3 - Listar veículos em Stock   "
