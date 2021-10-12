@@ -26,9 +26,7 @@ Sair(){
     exit
 }
 
-#============ Função do Menu_Iniciar ============
-
-
+#============ Função do Menu_Iniciar ==============
     menu=$(
         dialog --stdout                           \
                 --title 'Menu Inicial'            \
@@ -36,7 +34,7 @@ Sair(){
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
-                3 'Atualizar Preco de Restauro'   \
+                3 'Atualizar Precçço de Restauro'   \
                 4 'Visualizar Automoveis'         \
                 5 'Alterar Dados'                 \
                 6 'Visualizar Automoveis'         \
@@ -57,16 +55,3 @@ Sair(){
          7) SGBD ;;
          0) break ;;
     esac
-
-
-
-#============ Função do Menu_Iniciar ============
-    
-  
-
-#============ Função do Menu para criar Backup dos dados ============
-
-#============ Função para fazer o Restauro dos dados ============
-
-#============ Função para executar o programa ==============
-
