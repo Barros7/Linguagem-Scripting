@@ -1,2 +1,52 @@
 Duvidas: 
 Menu alterar dados e alterar preço de restauro de dados. Parece-nos ser a mesma coisa.
+
+listarVv(){​​​
+    ../Compras/compra.sh
+}​​​
+
+
+#============ Chamar o ficheiro Listar veículos vendidos =============
+
+Listar_veiculos_vendidos(){​​​
+    ../Vendas/venda.sh
+}​​​
+
+
+#============ Chamar o ficheiro Listar veículos em Stock =============
+
+Listar_veiculos_em_stock(){​​​
+    ..Stocks/stock.sh
+}​​​
+
+
+#============ Chamar o ficheiro Número de veículos em stock =============
+
+Numero_de_veiculos_em_stock(){​​​
+    ..Stocks/stock.sh
+}​​​
+#============ Chamar o ficheiro Número de veículos vendido =============
+
+Numero_de_veiculos_vendido(){​​​
+    ..Stocks/stock.sh
+}​​​
+
+#============ Chamar o ficheiro Veículo mais antigo em stock =============
+
+Veiculo_mais_antigo_em_stock(){​​​
+    ..Stocks/stock.sh
+}​​​
+
+
+#============ Chamar o ficheiro Total lucros =============
+
+Total_lucros(){​​​
+    ..Stocks/stock.sh
+}​​​
+
+#============ Funçao para Sair do programa ============
+
+Sair(){​​​
+    Clear
+    exit
+}​​​
