@@ -30,7 +30,7 @@ Sair(){
 
 
     menu=$(
-        dialog --stdout                           \
+        dialog --stdout                           \ 
                 --title 'Menu Inicial'            \
                 --menu 'Escolhe uma opção'        \
                 0 0 0                             \
