@@ -1,48 +1,56 @@
 #!/usr/bin/env bash
 
-
-#========================= Limpar Tel ================================
-
-#============ Chamar o ficheiro Listar veículos comprados ============
-
-    Compra(){
-        ../Compras/compra.sh
-    }
-
-#============ Chamar o ficheiro Listar veículos vendidos =============
-
-    Venda(){
-        ../Vendas/venda.sh
-    }
-
-#============ Chamar o ficheiro Listar veículos em Stock =============
-
-    Stock(){
-        ..Stocks/stock.sh
-    }
-
-#=========== Funçao para Sair do programa ============
-
-    Sair(){
-        Clear
-        exit
-    }
-
-#============ Função do menu Relatório ================
-
-Relatorio(){
-    Clear
-    echo " 1 - Listar veículos comprados  "
-    echo " 2 - Listar veículos vendidos   "
-    echo " 3 - Listar veículos em Stock   "
-    echo " 0 - Sair do Programa           "
-    read opcao2
-
-    case $opcao2 in             #============ Estamos a pensar como vai ser ================
-        1) Listar_veiculo_comprados ;;
-        2) Listar_veiculos_vendidos ;; 
-        3) Listar_veiculos_em_Stock ;;
-        0) Sair ;;
-    esac
+#============ Chamar o ficheiro de Compra ============
+Compra(){
+    ../Compras/compra.sh
 }
-Relatorio ""
+
+#============ Chamar o ficheiro de Base de Dados ============
+SGBD(){
+    ../GBD/base_de_dados.sh
+    }
+
+#============ Chamar o ficheiro de Venda ============
+Venda(){
+    ../Vendas/venda.sh
+    }
+
+#============ Chamar o ficheiro de Backup ============
+Backups(){
+    ../Backups/backup.sh
+    }
+
+#============ Função para  Sair do programa ============
+Sair(){
+    clear
+    exit
+}
+
+#============ Função do Menu_Iniciar ==============
+    menu=$(
+        dialog --stdout                           \
+                --title 'Relatorio'               \
+                --menu 'Escolhe uma opção'        \
+                0 0 0                             \
+                1 'Listar veiculos comprados'     \
+                2 'Listar veiculos vendidos'      \
+                3 'Listar veiculos em stock'      \
+                4 'Numero de veiculos em stock'   \
+                5 'Numero de veiculos vendido'    \
+                6 'Veiculo mais antigo em stock'  \
+                7 'Total lucros'                  \
+                0 'Sair'                
+        )
+
+    [ $? -ne 0 ] && break
+
+    case "$menu" in
+         1) listar_veiculos_comprados ;;
+         2) listar_veiculos_vendidos ;;
+         3) listar_veiculos_em_stock ;;
+         4) numero_de_veiculos_em_stock ;;
+         5) numero_de_veiculos_vendido ;;
+         6) veiculo_mais_antigo_em_stock ;;
+         7) total_lucros ;;
+         0) break ;;
+    esac
