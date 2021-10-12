@@ -21,7 +21,7 @@
         ..Stocks/stock.sh
     }
 
-#=========== Funçao para Sair do programa ============
+#============ Funçao para Sair do programa ============
 
     Sair(){
         Clear
