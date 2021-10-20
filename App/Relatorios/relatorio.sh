@@ -30,7 +30,7 @@ Sair(){
     menu=$(
         dialog --stdout                           \
                 --title 'Relatorio'               \
-                --menu 'Escolhe uma opção'        \
+                --menu 'Escolha uma opção'        \
                 0 0 0                             \
                 1 'Listar veiculos comprados'     \
                 2 'Listar veiculos vendidos'      \

@@ -18,4 +18,4 @@ Por  exemplo -cada  registo  de  base de dados  corresponderia  a  uma  linha de
 * Data da compra do automóvel
 * Custo de restauro e valorização;
 * Preço de venda(um inteiro em Euros) doautomóvel ao cliente
-* Data da vendado automóvel. 
+* Data da venda do automóvel. 

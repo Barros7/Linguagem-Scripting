@@ -1,7 +1,7 @@
     menu=$(
         dialog --stdout                           \
                 --title 'Compra'            \
-                --menu 'Escolhe uma opção:'       \
+                --menu 'Escolha uma opção:'       \
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
