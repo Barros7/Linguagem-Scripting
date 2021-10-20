@@ -1,0 +1,5 @@
+Em falta:
+
+Pesquisar como ler uma função de um ficheiro externo.
+
+O ficheiro para visualizar automoveis por critério vai ler os dados do ficheiro que estiver no stok

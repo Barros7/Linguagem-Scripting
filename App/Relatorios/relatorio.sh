@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env bash
 
 #============ Chamar o ficheiro de Compra ============
@@ -53,4 +54,61 @@ Sair(){
          6) veiculo_mais_antigo_em_stock ;;
          7) total_lucros ;;
          0) break ;;
+=======
+#!/usr/bin/env bash
+
+#============ Chamar o ficheiro de Compra ============
+Compra(){
+    ../Compras/compra.sh
+}
+
+#============ Chamar o ficheiro de Base de Dados ============
+SGBD(){
+    ../GBD/base_de_dados.sh
+    }
+
+#============ Chamar o ficheiro de Venda ============
+Venda(){
+    ../Vendas/venda.sh
+    }
+
+#============ Chamar o ficheiro de Backup ============
+Backups(){
+    ../Backups/backup.sh
+    }
+
+#============ Função para  Sair do programa ============
+Sair(){
+    clear
+    exit
+}
+
+#============ Função do Menu_Iniciar ==============
+    menu=$(
+        dialog --stdout                           \
+                --title 'Relatorio'               \
+                --menu 'Escolhe uma opção'        \
+                0 0 0                             \
+                1 'Listar veiculos comprados'     \
+                2 'Listar veiculos vendidos'      \
+                3 'Listar veiculos em stock'      \
+                4 'Numero de veiculos em stock'   \
+                5 'Numero de veiculos vendido'    \
+                6 'Veiculo mais antigo em stock'  \
+                7 'Total lucros'                  \
+                0 'Sair'                
+        )
+
+    [ $? -ne 0 ] && break
+
+    case "$menu" in
+         1) listar_veiculos_comprados ;;
+         2) listar_veiculos_vendidos ;;
+         3) listar_veiculos_em_stock ;;
+         4) numero_de_veiculos_em_stock ;;
+         5) numero_de_veiculos_vendido ;;
+         6) veiculo_mais_antigo_em_stock ;;
+         7) total_lucros ;;
+         0) break ;;
+>>>>>>> 1c09db72b61dda7f93297e7727cbe84ec809b43a
     esac
