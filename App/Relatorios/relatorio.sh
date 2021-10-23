@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-dos2unix -b ./compra.sh
+function convert_DOS2UNIX(){
+    dos2unix -b ./compra.sh
+}
+
 #============ Chamar o ficheiro de Compra ============
 Compra(){
     ../Compras/compra.sh
@@ -55,3 +58,5 @@ Sair(){
          7) total_lucros ;;
          0) break ;;
     esac
+
+    convert_DOS2UNIX ""
