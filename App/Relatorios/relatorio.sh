@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+dos2unix -b ./compra.sh
 #============ Chamar o ficheiro de Compra ============
 Compra(){
     ../Compras/compra.sh

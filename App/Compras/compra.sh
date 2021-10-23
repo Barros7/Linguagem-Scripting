@@ -1,3 +1,4 @@
+    #!/bin/bash
     menu=$(
         dialog --stdout                           \
                 --title 'Compra'            \
