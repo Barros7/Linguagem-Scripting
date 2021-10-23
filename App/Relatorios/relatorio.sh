@@ -1,46 +1,36 @@
 #!/usr/bin/env bash
-#============ Chamar o ficheiro Listar veículos comprados ============
-Listar_veiculos_comprados(){
+
+function convert_DOS2UNIX(){
+    dos2unix -b ./compra.sh
+}
+
+#============ Chamar o ficheiro de Compra ============
+Compra(){
     ../Compras/compra.sh
 }
 
-#============ Chamar o ficheiro Listar veículos vendidos =============
-Listar_veiculos_vendidos(){
+#============ Chamar o ficheiro de Base de Dados ============
+SGBD(){
+    ../GBD/base_de_dados.sh
+    }
+
+#============ Chamar o ficheiro de Venda ============
+Venda(){
     ../Vendas/venda.sh
-}
+    }
 
-#============ Chamar o ficheiro Listar veículos em Stock =============
-Listar_veiculos_em_stock(){
-    ..Stocks/stock.sh
-}
+#============ Chamar o ficheiro de Backup ============
+Backups(){
+    ../Backups/backup.sh
+    }
 
-#============ Chamar o ficheiro Número de veículos em stock =============
-Numero_de_veiculos_em_stock(){
-    ..Stocks/stock.sh
-}
-
-#============ Chamar o ficheiro Número de veículos vendido =============
-Numero_de_veiculos_vendido(){
-    ..Stocks/stock.sh
-}
-
-#============ Chamar o ficheiro Veículo mais antigo em stock =============
-Veiculo_mais_antigo_em_stock(){
-    ..Stocks/stock.sh
-}
-
-    #============ Chamar o ficheiro Total lucros =============
-Total_lucros(){
-    ..Stocks/stock.sh
-}
-#============ Funçao para Sair do programa ============
+#============ Função para  Sair do programa ============
 Sair(){
-    Clear
+    clear
     exit
 }
 
-#============ Função do menu Relatório ================
-#
+#============ Função do Menu_Iniciar ==============
     menu=$(
         dialog --stdout                           \
                 --title 'Relatorio'               \
@@ -59,12 +49,15 @@ Sair(){
     [ $? -ne 0 ] && break
 
     case "$menu" in
-         1) Listar_veiculos_comprados ;;
-         2) Listar_veiculos_vendidos ;;
-         3) Listar_veiculos_em_stock ;;
-         4) Numero_de_veiculos_em_stock ;;
-         5) Numero_de_veiculos_vendido ;;
-         6) Veiculo_mais_antigo_em_stock ;;
-         7) Total_lucros ;;
+         1) listar_veiculos_comprados ;;
+         2) listar_veiculos_vendidos ;;
+         3) listar_veiculos_em_stock ;;
+         4) numero_de_veiculos_em_stock ;;
+         5) numero_de_veiculos_vendido ;;
+         6) veiculo_mais_antigo_em_stock ;;
+         7) total_lucros ;;
          0) break ;;
     esac
+
+    #convert file DOS2UNIX
+    convert_DOS2UNIX ""

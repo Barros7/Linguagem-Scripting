@@ -2,18 +2,18 @@
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    clear
     ./functions/comprar.sh
+}
+
+
+#============ Chamar o ficheiro de Venda ============
+Venda(){
+    ./functions/vender.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){
     ../GBD/base_de_dados.sh
-    }
-
-#============ Chamar o ficheiro de Venda ============
-Venda(){
-    ../Vendas/venda.sh
     }
 
 #============ Chamar o ficheiro de Backup ============

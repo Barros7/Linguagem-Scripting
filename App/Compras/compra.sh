@@ -1,4 +1,5 @@
     #!/bin/bash
+<<<<<<< HEAD
 
 function convert_DOS2UNIX(){
     dos2unix -b ./compra.sh
@@ -30,6 +31,9 @@ function Relatorios (){
 
 function menu_Compra(){
 menu=$(
+=======
+    menu=$(
+>>>>>>> c32cc45b9d20b59aa416daad49afa2536a3d0058
         dialog --stdout                           \
                 --title 'Compra'            \
                 --menu 'Escolhe uma opção:'       \
