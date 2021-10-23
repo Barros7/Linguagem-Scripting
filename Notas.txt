@@ -1,2 +1,5 @@
-Duvidas: 
-Menu alterar dados e alterar preço de restauro de dados. Parece-nos ser a mesma coisa.
+Em falta:
+
+Pesquisar como ler uma função de um ficheiro externo.
+
+O ficheiro para visualizar automoveis por critério vai ler os dados do ficheiro que estiver no stok

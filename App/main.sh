@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ../Compras/compra.sh
+    clear
+    ./functions/comprar.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
@@ -26,27 +27,23 @@ Sair(){
     exit
 }
 
-#============ Função do Menu_Iniciar ============
-
-
+#============ Função do Menu_Iniciar ==============
+function Main(){
     menu=$(
-        dialog --stdout                           \
-                --title 'Menu Inicial'            \
+        dialog --stdout --title 'Menu Inicial'    \
                 --menu 'Escolhe uma opção'        \
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
-                3 'Atualizar Preco de Restauro'   \
+                3 'Atualizar Preço de Restauro'   \
                 4 'Visualizar Automoveis'         \
                 5 'Alterar Dados'                 \
                 6 'Visualizar Automoveis'         \
                 7 'Gestão de Base de Dados'       \
                 8 'Relatórios'                    \
-                0 'Sair'                
+                0 'Sair'
         )
-
     [ $? -ne 0 ] && break
-
     case "$menu" in
          1) Compra ;;
          2) Venda ;;
@@ -57,17 +54,6 @@ Sair(){
          7) SGBD ;;
          0) break ;;
     esac
+}
 
-
-
-#============ Função do Menu_Iniciar ============
-    
-  
-
-#============ Função do Menu para criar Backup dos dados ============
-
-#============ Função para fazer o Restauro dos dados ============
-
-#============ Função para executar o programa ==============
-
-
+Main ""

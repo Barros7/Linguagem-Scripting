@@ -40,7 +40,7 @@ Sair(){
 }
 
 #============ Função do menu Relatório ================
-
+#
     menu=$(
         dialog --stdout                           \
                 --title 'Relatorio'               \
