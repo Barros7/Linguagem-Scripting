@@ -28,9 +28,7 @@ Sair(){
 
 #============ Função do Menu_Iniciar ==============
     menup=$(
-        dialog --stdout                           \ 
-               --title 'Menu Inicial'             \
-               --menu 'Escolha uma opção'         \
+        dialog --stdout --title 'Menu Inicial' --menu 'Escolha uma opção'         \
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
@@ -43,15 +41,15 @@ Sair(){
                 0 'Sair'                
         )
 
-    [ $? -ne 0 ] && break
+   # [ $? -ne 0 ] && break
 
-    case "$menup" in
-         1) Compra ;;
-         2) Venda ;;
-         3) Atualizar_Preco_de_Restauro ;;
-         4) Visualizar_Automoveis ;;
-         5) Alterar_Dados ;;
-         6) Relatorios ;;
-         7) SGBD ;;
-         0) break ;;
-    esac
+    #case "$menup" in
+       #  1) Compra ;;
+       #  2) Venda ;;
+       #  3) Atualizar_Preco_de_Restauro ;;
+       #  4) Visualizar_Automoveis ;;
+       #  5) Alterar_Dados ;;
+       #  6) Relatorios ;;
+       #  7) SGBD ;;
+       #  0) break ;;
+    #esac

@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env bash
 
+=======
+#!/usr/bin/env bash
+
+function convert_DOS2UNIX(){
+    dos2unix -b ./compra.sh
+}
+
+>>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993
 #============ Chamar o ficheiro de Compra ============
 Compra(){
     ../Compras/compra.sh
@@ -31,7 +40,11 @@ Sair(){
     menu=$(
         dialog --stdout                           \
                 --title 'Relatorio'               \
+<<<<<<< HEAD
                 --menu 'Escolha uma opção'        \
+=======
+                --menu 'Escolhe uma opção'        \
+>>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993
                 0 0 0                             \
                 1 'Listar veiculos comprados'     \
                 2 'Listar veiculos vendidos'      \
@@ -54,6 +67,7 @@ Sair(){
          6) veiculo_mais_antigo_em_stock ;;
          7) total_lucros ;;
          0) break ;;
+<<<<<<< HEAD
 =======
 #!/usr/bin/env bash
 
@@ -112,3 +126,9 @@ Sair(){
          0) break ;;
 >>>>>>> 1c09db72b61dda7f93297e7727cbe84ec809b43a
     esac
+=======
+    esac
+
+    #convert file DOS2UNIX
+    convert_DOS2UNIX ""
+>>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993

@@ -1,4 +1,39 @@
+    #!/bin/bash
+<<<<<<< HEAD
+
+function convert_DOS2UNIX(){
+    dos2unix -b ./compra.sh
+} 
+
+function Compra (){
+    echo "Compra"
+}
+
+function Venda (){
+    echo "Venda"
+}
+
+function Atualizar_Preco_de_Restauro (){
+    echo "Atualizar_Preco_de_Restauro"
+}
+
+function Visualizar_Automoveis (){
+    echo "Visualizar_Automoveis"
+}
+
+function Gestão_Base_Dados (){
+    echo "Gestão_Base_Dados"
+}
+
+function Relatorios (){
+    echo "Relatorios"
+}
+
+function menu_Compra(){
+menu=$(
+=======
     menu=$(
+>>>>>>> c32cc45b9d20b59aa416daad49afa2536a3d0058
         dialog --stdout                           \
                 --title 'Compra'            \
                 --menu 'Escolha uma opção:'       \
@@ -25,3 +60,8 @@
          6) Relatorios ;;
          0) break ;;
     esac
+}
+
+convert_DOS2UNIX ""
+
+menu_Compra ""

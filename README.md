@@ -1,7 +1,10 @@
 # Linguagem Scripting
 
-## Desenvolvimento de uma aplicação de gestão em Bourne Again Shell
+## Converte file DOS to UNIX command
+- step 1: install the dos2unix.
+sudo apt install dos2unix
 
+<<<<<<< HEAD
 ### OBJECTIVOSO 
 
 objectivo deste trabalho é o desenvolvimento de um programa que permita efectuar a gestão de uma empresa da área do comércio de automóveis usados. A actividade desta empresa é a compra de automóveis usados, o seu restauro e valorização seguido pelasua venda. O objectivo é produzir um protótipo dumaaplicação informática futura usandoa linguagem e comandos do  BASH Shell.
@@ -19,3 +22,7 @@ Por  exemplo -cada  registo  de  base de dados  corresponderia  a  uma  linha de
 * Custo de restauro e valorização;
 * Preço de venda(um inteiro em Euros) doautomóvel ao cliente
 * Data da venda do automóvel. 
+=======
+- step 2: convert file.
+dos2unix -b fileName
+>>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993

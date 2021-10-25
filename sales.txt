@@ -1,0 +1,11 @@
+1:Laranaja:20
+2:Laranaja:20
+3:Laranaja:20
+4:Laranaja:20
+5:Laranaja:20
+6:Laranaja:20
+7:Laranaja:20
+8:Laranaja:20
+
+-F -> separador
+/ma/ -> padrão

@@ -2,17 +2,18 @@
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ../Compras/compra.sh
+    ./functions/comprar.sh
+}
+
+
+#============ Chamar o ficheiro de Venda ============
+Venda(){
+    ./functions/vender.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){
     ../GBD/base_de_dados.sh
-    }
-
-#============ Chamar o ficheiro de Venda ============
-Venda(){
-    ../Vendas/venda.sh
     }
 
 #============ Chamar o ficheiro de Backup ============
@@ -27,6 +28,7 @@ Sair(){
 }
 
 #============ Função do Menu_Iniciar ==============
+<<<<<<< HEAD:main.sh
 <<<<<<< HEAD:App/Principal/main.sh
     menup=$(
         dialog --stdout                           \ 
@@ -34,6 +36,9 @@ Sair(){
                --menu 'Escolha uma opção'         \
 =======
 while : ; do
+=======
+function Main(){
+>>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993:App/main.sh
     menu=$(
         dialog --stdout --title 'Menu Inicial'    \
                 --menu 'Escolhe uma opção'        \
@@ -65,7 +70,13 @@ while : ; do
          7) SGBD ;;
          0) break ;;
     esac
+<<<<<<< HEAD:main.sh
 <<<<<<< HEAD:App/Principal/main.sh
 =======
 done
 >>>>>>> 1c09db72b61dda7f93297e7727cbe84ec809b43a:main.sh
+=======
+}
+
+Main ""
+>>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993:App/main.sh
