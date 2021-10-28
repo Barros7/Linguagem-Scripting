@@ -1,6 +1,8 @@
 #!/bin/bash
 
 function vender(){
+
+
     
 }
 
