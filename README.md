@@ -6,3 +6,7 @@ sudo apt install dos2unix
 
 - step 2: convert file.
 dos2unix -b fileName
+
+## Linux commmand
+- directory delete:
+rm -r dirName
