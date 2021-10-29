@@ -2,13 +2,12 @@
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ./functions/comprar.sh
+    ./Compras/compra.sh ../MarketplaceCars/wwwcars.txt
 }
-
 
 #============ Chamar o ficheiro de Venda ============
 Venda(){
-    ./functions/vender.sh
+    ./Venda/venda.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
