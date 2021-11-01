@@ -27,15 +27,7 @@ Sair(){
 }
 
 #============ Função do Menu_Iniciar ============
-    menup=$(
-        dialog --stdout                           \ 
-               --title 'Menu Inicial'             \
-               --menu 'Escolha uma opção'         \
-
-while : ; do
-
 function Main(){
-
     menu=$(
         dialog --stdout --title 'Menu Inicial'    \
                 --menu 'Escolhe uma opção'        \
@@ -53,9 +45,6 @@ function Main(){
         )
     [ $? -ne 0 ] && break
 
-
-    case "$menup" in
-
     case "$menu" in
 
          1) Compra ;;
@@ -67,24 +56,5 @@ function Main(){
          7) SGBD ;;
          0) break ;;
     esac
-
-done
-
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-Main ""
-=======
 Main " "
-
->>>>>>> 5350263618e9839a8e518e34865d9e2edd94904b
-=======
-Main " "
-
->>>>>>> 5350263618e9839a8e518e34865d9e2edd94904b
-=======
-Main " "
-
->>>>>>> 5350263618e9839a8e518e34865d9e2edd94904b
