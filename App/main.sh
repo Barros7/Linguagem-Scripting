@@ -27,16 +27,6 @@ Sair(){
 }
 
 #============ Função do Menu_Iniciar ============
-<<<<<<< HEAD
-    menup=$(
-        dialog --stdout                           \ 
-               --title 'Menu Inicial'             \
-               --menu 'Escolha uma opção'         \
-
-
-
-=======
->>>>>>> 57fc1aeee007d5cd59236edade1f458a69771bec
 function Main(){
 
     menu=$(
@@ -55,10 +45,6 @@ function Main(){
         )
     [ $? -ne 0 ] && break
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 57fc1aeee007d5cd59236edade1f458a69771bec
     case "$menu" in
 
          1) Compra ;;
@@ -73,8 +59,4 @@ function Main(){
 
 }
 
-<<<<<<< HEAD
 Main " "
-=======
-Main " "
->>>>>>> 57fc1aeee007d5cd59236edade1f458a69771bec
