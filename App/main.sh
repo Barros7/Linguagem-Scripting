@@ -58,9 +58,4 @@ function Main(){
     esac
 
 }
-<<<<<<< HEAD
-
 Main " "
-=======
-Main " "
->>>>>>> 295057df076f30a3014e53728a72795590a10ed2
