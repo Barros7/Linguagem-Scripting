@@ -26,11 +26,20 @@ Sair(){
     exit
 }
 
-#============ Função do Menu_Iniciar ==============
+#============ Função do Menu_Iniciar ============
+    menup=$(
+        dialog --stdout                           \ 
+               --title 'Menu Inicial'             \
+               --menu 'Escolha uma opção'         \
+
+while : ; do
+
 function Main(){
+
     menu=$(
         dialog --stdout --title 'Menu Inicial'    \
                 --menu 'Escolhe uma opção'        \
+
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
@@ -43,7 +52,12 @@ function Main(){
                 0 'Sair'
         )
     [ $? -ne 0 ] && break
+
+
+    case "$menup" in
+
     case "$menu" in
+
          1) Compra ;;
          2) Venda ;;
          3) Atualizar_Preco_de_Restauro ;;
@@ -53,6 +67,14 @@ function Main(){
          7) SGBD ;;
          0) break ;;
     esac
+
+done
+
 }
 
+<<<<<<< HEAD
 Main ""
+=======
+Main " "
+
+>>>>>>> 5350263618e9839a8e518e34865d9e2edd94904b

@@ -16,6 +16,18 @@ objectivo deste trabalho é o desenvolvimento de um programa que permita efectua
 * O programa a desenvolver deve ter uma interface em modo de texto simples e fácil de usar.
 * Os dados são guardados em um ou mais ficheirosde texto (o base de dados) num formato a definir pelos alunos.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+### OBJECTIVOSO 
+
+objectivo deste trabalho é o desenvolvimento de um programa que permita efectuar a gestão de uma empresa da área do comércio de automóveis usados. A actividade desta empresa é a compra de automóveis usados, o seu restauro e valorização seguido pelasua venda. O objectivo é produzir um protótipo dumaaplicação informática futura usandoa linguagem e comandos do  BASH Shell.
+
+### Descrição
+* O programa a desenvolver deve ter uma interface em modo de texto simples e fácil de usar.
+* Os dados são guardados em um ou mais ficheirosde texto (o base de dados) num formato a definir pelos alunos.
+
+>>>>>>> 5350263618e9839a8e518e34865d9e2edd94904b
 Por  exemplo -cada  registo  de  base de dados  corresponderia  a  uma  linha de  texto  com  os  campos separados por um caracter especial ( :  ou @ ou # ).•Os dados a manipular, relativamente ao automóvel são:
 * Matrícula, que deve ser únicap.ex 22FG02
 * Marca, Modelo, Ano do Fabricodo automóvel
@@ -29,4 +41,7 @@ Por  exemplo -cada  registo  de  base de dados  corresponderia  a  uma  linha de
 - step 2: convert file.
 dos2unix -b fileName
 >>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993
+<<<<<<< HEAD
 >>>>>>> 4a0d7c389a286027dfed9b28a88361bad68fc839
+=======
+>>>>>>> 5350263618e9839a8e518e34865d9e2edd94904b
