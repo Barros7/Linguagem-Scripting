@@ -27,21 +27,10 @@ Sair(){
 }
 
 #============ Função do Menu_Iniciar ==============
-<<<<<<< HEAD:main.sh
-<<<<<<< HEAD:App/Principal/main.sh
-    menup=$(
-        dialog --stdout                           \ 
-               --title 'Menu Inicial'             \
-               --menu 'Escolha uma opção'         \
-=======
-while : ; do
-=======
 function Main(){
->>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993:App/main.sh
     menu=$(
         dialog --stdout --title 'Menu Inicial'    \
                 --menu 'Escolhe uma opção'        \
->>>>>>> 1c09db72b61dda7f93297e7727cbe84ec809b43a:main.sh
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
@@ -54,12 +43,7 @@ function Main(){
                 0 'Sair'
         )
     [ $? -ne 0 ] && break
-<<<<<<< HEAD:App/Principal/main.sh
-
-    case "$menup" in
-=======
     case "$menu" in
->>>>>>> 1c09db72b61dda7f93297e7727cbe84ec809b43a:main.sh
          1) Compra ;;
          2) Venda ;;
          3) Atualizar_Preco_de_Restauro ;;
@@ -69,13 +53,6 @@ function Main(){
          7) SGBD ;;
          0) break ;;
     esac
-<<<<<<< HEAD:main.sh
-<<<<<<< HEAD:App/Principal/main.sh
-=======
-done
->>>>>>> 1c09db72b61dda7f93297e7727cbe84ec809b43a:main.sh
-=======
 }
 
 Main ""
->>>>>>> ab4ab270aa3f09ef029a1057c99a08fe4219f993:App/main.sh
