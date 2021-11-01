@@ -16,9 +16,9 @@ SGBD(){
     }
 
 #============ Chamar o ficheiro de Backup ============
-#Backups(){
-   # ../Backups/backup.sh
-   # }
+Backups(){
+    ../Backups/backup.sh
+    }
 
 #============ Função para  Sair do programa ============
 Sair(){
