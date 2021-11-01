@@ -16,9 +16,9 @@ SGBD(){
     }
 
 #============ Chamar o ficheiro de Backup ============
-Backups(){
-    ../Backups/backup.sh
-    }
+#Backups(){
+   # ../Backups/backup.sh
+   # }
 
 #============ Função para  Sair do programa ============
 Sair(){
@@ -58,5 +58,9 @@ function Main(){
     esac
 
 }
+<<<<<<< HEAD
 
 Main " "
+=======
+Main " "
+>>>>>>> 295057df076f30a3014e53728a72795590a10ed2

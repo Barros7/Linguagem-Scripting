@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     #!/bin/bash
 <<<<<<< HEAD
 
@@ -48,9 +49,18 @@ menu=$(
                 8 'Relatórios'                    \
                 0 'Sair'                
         )
+=======
+#!/bin/bash
+filename="$1"
+tags=()
+>>>>>>> 295057df076f30a3014e53728a72795590a10ed2
 
-    [ $? -ne 0 ] && break
+while read -r tag;
+    do
+        tags+=("${tag} off")
+    done < "$filename"
 
+<<<<<<< HEAD
     case "$menu" in
          1) Compra ;;
          2) Venda ;;
@@ -65,3 +75,6 @@ menu=$(
 convert_DOS2UNIX ""
 
 menu_Compra ""
+=======
+carros=$(dialog --stdout --no-items --checklist "Carros:" 20 50 ${#tags[@]} ${tags[@]})
+>>>>>>> 295057df076f30a3014e53728a72795590a10ed2
