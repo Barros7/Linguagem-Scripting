@@ -33,13 +33,12 @@ Sair(){
                --title 'Menu Inicial'             \
                --menu 'Escolha uma opção'         \
 
-while : ; do
+
 
 function Main(){
 
     menu=$(
-        dialog --stdout --title 'Menu Inicial'    \
-                --menu 'Escolhe uma opção'        \
+        dialog --stdout --title 'Menu Inicial' --menu 'Escolhe uma opção'        \
 
                 0 0 0                             \
                 1 'Compra'                        \
@@ -55,8 +54,6 @@ function Main(){
     [ $? -ne 0 ] && break
 
 
-    case "$menup" in
-
     case "$menu" in
 
          1) Compra ;;
@@ -69,9 +66,6 @@ function Main(){
          0) break ;;
     esac
 
-done
-
 }
 
 Main " "
-

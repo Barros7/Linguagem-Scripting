@@ -12,7 +12,7 @@ Sair(){
 menuv=$(
     dialog --stdout                                     \
            --title 'Visualizar Automoveis por Criterio' \
-           --menu 'Escola uma opção'                    \
+           --menu 'Escolha uma opção'                    \
            0 0 0                                        \
            1 'Matricula'                                \
            2 'Marca'                                    \
