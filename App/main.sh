@@ -31,7 +31,6 @@ function Main(){
     menu=$(
         dialog --stdout --title 'Menu Inicial'    \
                 --menu 'Escolhe uma opção'        \
-
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
@@ -46,7 +45,6 @@ function Main(){
     [ $? -ne 0 ] && break
 
     case "$menu" in
-
          1) Compra ;;
          2) Venda ;;
          3) Atualizar_Preco_de_Restauro ;;
