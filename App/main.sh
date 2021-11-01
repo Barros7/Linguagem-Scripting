@@ -2,13 +2,12 @@
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ./functions/comprar.sh
+    ./Compras/compra.sh ../MarketplaceCars/wwwcars.txt
 }
-
 
 #============ Chamar o ficheiro de Venda ============
 Venda(){
-    ./functions/vender.sh
+    ./Venda/venda.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
@@ -17,9 +16,9 @@ SGBD(){
     }
 
 #============ Chamar o ficheiro de Backup ============
-#Backups(){
-   # ../Backups/backup.sh
-   # }
+Backups(){
+    ../Backups/backup.sh
+    }
 
 #============ Função para  Sair do programa ============
 Sair(){
@@ -28,6 +27,7 @@ Sair(){
 }
 
 #============ Função do Menu_Iniciar ============
+<<<<<<< HEAD
     menup=$(
         dialog --stdout                           \ 
                --title 'Menu Inicial'             \
@@ -35,6 +35,8 @@ Sair(){
 
 
 
+=======
+>>>>>>> 57fc1aeee007d5cd59236edade1f458a69771bec
 function Main(){
 
     menu=$(
@@ -53,7 +55,10 @@ function Main(){
         )
     [ $? -ne 0 ] && break
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 57fc1aeee007d5cd59236edade1f458a69771bec
     case "$menu" in
 
          1) Compra ;;
@@ -68,4 +73,8 @@ function Main(){
 
 }
 
+<<<<<<< HEAD
 Main " "
+=======
+Main " "
+>>>>>>> 57fc1aeee007d5cd59236edade1f458a69771bec
