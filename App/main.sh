@@ -2,13 +2,12 @@
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ./functions/comprar.sh
+    ./Compras/compra.sh ../MarketplaceCars/wwwcars.txt
 }
-
 
 #============ Chamar o ficheiro de Venda ============
 Venda(){
-    ./functions/vender.sh
+    ./Venda/venda.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
@@ -28,13 +27,6 @@ Sair(){
 }
 
 #============ Função do Menu_Iniciar ============
-    menup=$(
-        dialog --stdout                           \ 
-               --title 'Menu Inicial'             \
-               --menu 'Escolha uma opção'         \
-
-while : ; do
-
 function Main(){
 
     menu=$(
@@ -54,9 +46,6 @@ function Main(){
         )
     [ $? -ne 0 ] && break
 
-
-    case "$menup" in
-
     case "$menu" in
 
          1) Compra ;;
@@ -69,9 +58,6 @@ function Main(){
          0) break ;;
     esac
 
-done
-
 }
 
 Main " "
-
