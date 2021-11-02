@@ -4,8 +4,10 @@ Pensar na lógica de como vamos representar a lista de carros
 
 
 
-App (empresa)    <-    MarketplaceCars(www.cars.com)
+App (empresa)    <--------    MarketplaceCars(www.cars.com)
+        |
         '----> stock
-                  '-----> Cliente(Nosso Cliente)
+                |
+                '-----> Cliente(Nosso Cliente)
 
                   MarketplaceCars copyFile App <=> App - Cliente        
