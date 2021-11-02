@@ -12,7 +12,7 @@ Venda(){
 
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){
-    ../GBD/base_de_dados.sh
+    ./GBD/base_de_dados.sh
     }
 
 #============ Chamar o ficheiro de Backup ============
@@ -31,7 +31,6 @@ function Main(){
 
     menu=$(
         dialog --stdout --title 'Menu Inicial' --menu 'Escolhe uma opção'        \
-
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
