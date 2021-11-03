@@ -2,12 +2,12 @@
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ./Compras/compra.sh ../MarketplaceCars/wwwcars.txt
+    ../Controller/Compras/compra.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 #============ Chamar o ficheiro de Venda ============
 Venda(){
-    ./Venda/venda.sh
+    ../Controller/Venda/venda.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
@@ -21,18 +21,17 @@ Visualizar_Automoveis_por_Criterio  (){
 }
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){
-    ./GBD/base_de_dados.sh
+    ./SGBD/base_de_dados.sh
     }
 
 #============ Chamar o ficheiro de Backup ============
-#Backups(){
-   # ../Backups/backup.sh
-   # }
+Backups(){
+    ./Backups/backup.sh
+    }
 
 #============ Função para  Sair do programa e limpar a tela ============
 break(){
     clear
-    exit
 }
 
 #============ Função do Menu_Iniciar ============
@@ -48,8 +47,7 @@ function Main(){
                 5 'Visualizar Automoveis por Criterio' \
                 6 'Alterar Dados'                 \
                 7 'Gestão de Base de Dados'       \
-                8 'Relatórios'                    \
-                0 'Sair'
+                8 'Relatórios'                    
         )
     [ $? -ne 0 ] && break
 

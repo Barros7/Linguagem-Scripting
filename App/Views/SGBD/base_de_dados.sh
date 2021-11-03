@@ -2,7 +2,7 @@
 
 #Executa o ficheiro criar backup
 function CriarBk(){
-    ./functions/criarBk.sh
+    ../Controllers/functions/criarBk.sh
 }
 
 function Voltar(){
