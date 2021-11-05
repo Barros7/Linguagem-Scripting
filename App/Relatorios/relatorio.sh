@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 function convert_DOS2UNIX(){
-    dos2unix -b ./compra.sh
+    dos2unix -b ./relatorio.sh
 }
 
-#============ Chamar o ficheiro de Compra ============
-Compra(){
-    ../Compras/compra.sh
+#============ Chamar o ficheiro de LVC ============
+L_v_c(){
+    ../L_v_c/Lvc.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
@@ -43,13 +43,14 @@ Sair(){
                 5 'Numero de veiculos vendido'    \
                 6 'Veiculo mais antigo em stock'  \
                 7 'Total lucros'                  \
-                0 'Sair'                
+                0 'Sair'   
+                 
         )
 
     [ $? -ne 0 ] && break
 
     case "$menu" in
-         1) listar_veiculos_comprados ;;
+         1) L_v_c;;
          2) listar_veiculos_vendidos ;;
          3) listar_veiculos_em_stock ;;
          4) numero_de_veiculos_em_stock ;;
@@ -61,4 +62,3 @@ Sair(){
 
     #convert file DOS2UNIX
     convert_DOS2UNIX ""
-    
