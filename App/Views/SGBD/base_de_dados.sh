@@ -5,6 +5,10 @@ function CriarBk(){
     ../Controllers/functions/criarBk.sh
 }
 
+function RestaurarCpS(){
+    ./Restauro/restaurarCp.sh
+}
+
 function Voltar(){
     ./main.sh
 }

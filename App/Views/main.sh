@@ -1,8 +1,14 @@
 #!/bin/bash
+perm(){
+    dos2unix ./Compra/comprar.sh
+    chmod +x ./Compra/comprar.sh
+    chmod +x ./Restauro/restaurarCp.sh
+    #git update-index --chmod=+x dar ao git as permissões no ficheiro.
+}
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ../Controller/Compras/compra.sh ../../MarketplaceCars/wwwcars.txt
+    ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 #============ Chamar o ficheiro de Venda ============
@@ -12,7 +18,7 @@ Venda(){
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
 Visualizar_Automoveis (){
-    Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    ./visualizar_carros_modo_geral.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
@@ -64,4 +70,5 @@ function Main(){
          0) break ;;
     esac
 }
+perm " "
 Main " "
