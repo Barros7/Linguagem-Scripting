@@ -39,7 +39,7 @@ break(){
 function Main(){
 
     menu=$(
-        dialog --stdout --title 'Menu Inicial' --menu 'Escolhe uma opção' \
+        dialog --stdout --title 'Menu Inicial' --menu 'Escolha uma opção' \
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
