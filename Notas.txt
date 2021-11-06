@@ -1,8 +1,0 @@
-Em falta:
-
-O ficheiro para visualizar automoveis por critério vai ler os dados do ficheiro que estiver no stok
-
-Usar o awk para: 
-    - criar relatório
-    - encontrar o maior valor
-    - calcular o lucro com o awk
