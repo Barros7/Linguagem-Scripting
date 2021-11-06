@@ -2,7 +2,7 @@
 clear #limpa o menu anterior.
 
 function comprar(){
-    menu$(dialog --stdout --inputbox 'Digite seu nome:' 0 0 "seu nome aqui"
+    menu$(dialog --stdout --inputbox 'Digite seu nome:' 0 0 "seu nome aqui" 
     read tipo
 
     echo "Introduz a marca:"
@@ -24,7 +24,7 @@ function comprar(){
     read precoRestauro
 
     echo "Introduz a data da compra:"
-    read dataCompra
+    read dataCompra )
 }
 
 comprar " "

@@ -1,38 +1,43 @@
 #!/bin/bash
+perm(){
+    dos2unix ./Compra/comprar.sh
+    chmod +x ./Compra/comprar.sh
+    chmod +x ./Restauro/restaurarCp.sh
+    #git update-index --chmod=+x dar ao git as permissões no ficheiro.
+}
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ./Compras/compra.sh ../MarketplaceCars/wwwcars.txt
+    ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 #============ Chamar o ficheiro de Venda ============
 Venda(){
-    ./Venda/venda.sh
+    ../Controller/Venda/venda.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
 Visualizar_Automoveis (){
-/home/jesus/Documents/Linguagem-Scripting/App/Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    ./visualizar_carros_modo_geral.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
 Visualizar_Automoveis_por_Criterio  (){
-/home/jesus/Documents/Linguagem-Scripting/App/Visualizar_Automovel/por_criterio.sh
+    Visualizar_Automovel/por_criterio.sh
 }
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){
-    ../GBD/base_de_dados.sh
+    ./SGBD/base_de_dados.sh
     }
 
 #============ Chamar o ficheiro de Backup ============
-#Backups(){
-   # ../Backups/backup.sh
-   # }
+Backups(){
+    ./Backups/backup.sh
+    }
 
 #============ Função para  Sair do programa e limpar a tela ============
 break(){
     clear
-    exit
 }
 
 #============ Função do Menu_Iniciar ============
@@ -48,8 +53,7 @@ function Main(){
                 5 'Visualizar Automoveis por Criterio' \
                 6 'Alterar Dados'                 \
                 7 'Gestão de Base de Dados'       \
-                8 'Relatórios'                    \
-                0 'Sair'
+                8 'Relatórios'                    
         )
     [ $? -ne 0 ] && break
 
@@ -66,4 +70,5 @@ function Main(){
          0) break ;;
     esac
 }
+perm " "
 Main " "
