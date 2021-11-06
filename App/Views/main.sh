@@ -19,8 +19,8 @@ Venda(){
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
 Visualizar_Automoveis (){
     chmod +x ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
-    chmod +r Visualizar_Automovel/visualizar_carros_modo_geral.sh
-    chmod +r Visualizar_Automovel/texbox_v.sh
+    chmod 777 Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    chmod 777 Visualizar_Automovel/texbox_v.sh
 
     ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
 }

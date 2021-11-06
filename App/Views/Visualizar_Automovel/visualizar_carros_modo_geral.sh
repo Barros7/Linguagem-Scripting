@@ -2,15 +2,17 @@
 
 #============ Visualizar automóveis comprados ============
 Carros_Comprados(){
-    chmod +r Visualizar_Automovel/texbox_v.sh
-    chmod +r Visualizar_Automovel/wwwcars.txt  
     chmod +x ./texbox_v.sh
-    ./texbox_v.sh
+    chmod +x ./wwwcars.txt  
+    chmod +x ./texbox_v_comprado.sh
+    ./texbox_v_comprado.sh
 }
 
 #============ Visualizar automóveis Vendidos ============
-#Carros_vendidos  (){
-#}
+Carros_vendidos  (){
+     chmod +x ./texbox_v_vendido.sh
+    ./texbox_v_vendido.sh
+}
 
 #============ Visualizar automóveis em Stock ============
 #Carros_em_Stock  (){
