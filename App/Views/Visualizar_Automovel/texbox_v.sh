@@ -7,8 +7,9 @@
 #}
 
 #============ Função visualizar carros modo geral ============
-
-        ARQUIVO="/home/jesus/Documents/Linguagem-Scripting/MarketplaceCars/wwwcars.txt"
+        chmod +r Visualizar_Automovel/wwwcars.txt  
+        chmod +x ./wwwcars.txt         
+        ARQUIVO="./wwwcars.txt" 
         dialog  --title "Visualizar Automovel $(basename $ARQUIVO)" --textbox "$ARQUIVO" \
                 0 0                \
       

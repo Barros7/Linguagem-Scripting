@@ -2,12 +2,10 @@
 
 #============ Visualizar automóveis comprados ============
 Carros_Comprados(){
-    #COMPRADOS="./commprados.text" &
-    
-    dialog \
-            --title "Todos os Automóveis Comprados" \
-            --textbox /home/jesus/Documents/Linguagem-Scripting/App/compra.txt  
-            15 40
+    chmod +r Visualizar_Automovel/texbox_v.sh
+    chmod +r Visualizar_Automovel/wwwcars.txt  
+    chmod +x ./texbox_v.sh
+    ./texbox_v.sh
 }
 
 #============ Visualizar automóveis Vendidos ============
@@ -32,7 +30,7 @@ break(){
 function Main(){
 
     menuc=$(
-        dialog --stdout --title 'Visualizar Carros' --menu 'Escolha uma opção' \
+        dialog --stdout --title 'Visualizar Automoveis' --menu 'Escolha uma opção' \
                 0 0 0                \
                 1 'Carros Comprados' \
                 2 'Carros Vendidos'  \

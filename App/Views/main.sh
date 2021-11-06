@@ -18,12 +18,18 @@ Venda(){
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
 Visualizar_Automoveis (){
-    ./visualizar_carros_modo_geral.sh
+    chmod +x ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    chmod +r Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    chmod +r Visualizar_Automovel/texbox_v.sh
+
+    ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
 Visualizar_Automoveis_por_Criterio  (){
-    Visualizar_Automovel/por_criterio.sh
+    chmod +x ./Visualizar_Automovel/por_criterio.sh
+
+    ./Visualizar_Automovel/por_criterio.sh
 }
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){
