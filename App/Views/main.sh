@@ -76,5 +76,4 @@ function Main(){
          0) break ;;
     esac
 }
-perm " "
 Main " "

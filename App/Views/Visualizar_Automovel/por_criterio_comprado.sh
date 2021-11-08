@@ -2,39 +2,70 @@
 
 #============ Função para  Sair do programa ============
 break(){
-clear
-   
-/home/jesus/Documents/Linguagem-Scripting/App/main.sh
-}
-
 clear #===== Limpa a escolha anterior ==========================
+   
+#/home/jesus/Documents/Linguagem-Scripting/App/main.sh
+}
 
 #============ Função visualizar carros por criterio / comprados ============
 
-function Visualicar_Por_Cri_Comprado(){
-    search$(dialog --stdout --inputbox 'Digite seu nome:' 0 0 "seu nome aqui" 
-    read tipo
-
-    echo "Introduz a marca:"
-    read marca
-
-    echo "Introduz a matrícula: "
-    read matricula
-    
-    echo "Introduz o modelo:"
-    read modelo
-
-    echo "Introduz o ano de fabrico:"
-    read ano
-
-    echo "Introduz o preço da compra:"
-    read precoCompra
-
-    echo "Introduz o preço de restauro:"
-    read precoRestauro
-
-    echo "Introduz a data da compra:"
-    read dataCompra )
-    break;;
+function Matricula(){
+    Matricula=$(dialog --stdout --inputbox 'Introduz a matrícula:' \
+    0 0 \
+    )
+    read Matricula
 }
-Visualicar_Por_Cri_Comprado " "
+
+function Marca(){
+    Marca=$(dialog --stdout --inputbox 'Introduz a marca:' \
+    0 0 \
+    )
+    read Marca
+}
+
+
+function Modelo(){
+    Modelo=$(dialog --stdout --inputbox 'Introduz o modelo:' \
+    0 0 \
+    )
+    read Modelo
+}
+
+function Ano(){
+    Ano=$(dialog --stdout --inputbox 'Introduz o ano de fabrico:' \
+    0 0 \
+    )
+    read Ano
+}
+
+function Tipo(){
+    Tipo=$(dialog --stdout --inputbox 'Introduz o tipo de automóvel:' \
+    0 0 \
+    )
+    read Tipo
+}
+
+#function Voltar(){
+    
+#}
+
+menu=$(
+    dialog --stdout --title 'Comprados' --menu 'Visualizar por Criterio: ' \
+                0 0 0               \
+                1 'Matrícula'       \
+                2 'Marca'           \
+                3 'Modelo'          \
+                4 'Ano'             \
+                5 'Tipo'            \
+                0 'Voltar'          \                  
+        )
+    
+    [ $? -ne 0 ] && break
+    case "$menu" in
+         1) Matricula ;;
+         2) Marca ;;
+         3) Modelo ;;
+         4) Ano ;;
+         5) Tipo_automovel ;;
+         0) break ;;
+    esac

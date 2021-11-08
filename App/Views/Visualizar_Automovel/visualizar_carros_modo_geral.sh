@@ -1,34 +1,24 @@
 #!/bin/bash
 
-#============ Visualizar automóveis comprados ============
-Carros_Comprados(){
-    chmod +x ./texbox_v.sh
-    chmod +x ./wwwcars.txt  
-    chmod +x ./texbox_v_comprado.sh
-    ./texbox_v_comprado.sh
-}
-
-#============ Visualizar automóveis Vendidos ============
-Carros_vendidos  (){
-     chmod +x ./texbox_v_vendido.sh
-    ./texbox_v_vendido.sh
-}
-
-#============ Visualizar automóveis em Stock ============
-#Carros_em_Stock  (){
-
-#}
 #============ Função para  Sair do programa ============
-Voltar(){   
-/home/jesus/Documents/Linguagem-Scripting/App/main.sh
+
+Carros_Comprados (){
+ chmod +x ./texbox_v_comprado.sh
+./texbox_v_comprado.sh
+}
+
+Carros_vendidos (){
+ chmod +x ./texbox_v_vendido.sh
+./texbox_v_vendido.sh
 }
 
 break(){
  clear
- exit
+ #/home/jesus/Documents/Linguagem-Scripting/App/main.sh
 }
 
-#============ Função visualizar carros por criterio ============
+
+#============ Função visualizar todos os Automóveis============
 function Main(){
 
     menuc=$(
@@ -37,18 +27,16 @@ function Main(){
                 1 'Carros Comprados' \
                 2 'Carros Vendidos'  \
                 3 'Carros em Stock'  \
-                4 'Voltar ao Menu Principal' \
-            
+                0 'Sair'
         )
-    [ $? -ne 0 ] && break
+    [ $? -ne 4 ] && break
 
     case "$menuc" in
 
          1) Carros_Comprados ;;
          2) Carros_vendidos ;;
          3) Carros_em_Stock ;;
-         4) Voltar ;;
-        # 0) break ;;
+         0) break ;;
     esac
 }
 Main " "
