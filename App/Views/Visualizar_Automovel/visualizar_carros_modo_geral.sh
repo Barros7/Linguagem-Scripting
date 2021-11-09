@@ -39,8 +39,24 @@ Main " "
 =======
 #!/bin/bash
 
+#============ Visualizar automóveis comprados ============
+Carros_Comprados(){
+    chmod +r Visualizar_Automovel/texbox_v.sh
+    chmod +r Visualizar_Automovel/wwwcars.txt  
+    chmod +x ./texbox_v.sh
+    ./texbox_v.sh
+}
+
+#============ Visualizar automóveis Vendidos ============
+#Carros_vendidos  (){
+#}
+
+#============ Visualizar automóveis em Stock ============
+#Carros_em_Stock  (){
+
+#}
 #============ Função para  Sair do programa ============
-Sair(){   
+Voltar(){   
 /home/jesus/Documents/Linguagem-Scripting/App/main.sh
 }
 
@@ -53,23 +69,23 @@ break(){
 function Main(){
 
     menuc=$(
-        dialog --stdout --title 'Visualizar Carros' --menu 'Escolha uma opção' \
+        dialog --stdout --title 'Visualizar Automoveis' --menu 'Escolha uma opção' \
                 0 0 0                \
                 1 'Carros Comprados' \
                 2 'Carros Vendidos'  \
                 3 'Carros em Stock'  \
-                0 'Sair'
-                4 'cancelar'
+                4 'Voltar ao Menu Principal' \
+            
         )
-    [ $? -ne 4 ] && break
+    [ $? -ne 0 ] && break
 
     case "$menuc" in
 
          1) Carros_Comprados ;;
          2) Carros_vendidos ;;
          3) Carros_em_Stock ;;
-         0) Sair ;;
-         4) break ;;
+         4) Voltar ;;
+        # 0) break ;;
     esac
 }
 Main " "

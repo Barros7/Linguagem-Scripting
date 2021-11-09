@@ -72,7 +72,7 @@ Sair(){
     [ $? -ne 0 ] && break
 
     case "$menu" in
-         1) L_v_c;;
+         1) L_v_c ;;
          2) L_v_v ;;
          3) L_v_s ;;
          4) N_v_s ;;

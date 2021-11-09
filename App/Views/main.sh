@@ -70,10 +70,16 @@ function Main(){
 Main " "
 =======
 #!/bin/bash
+perm(){
+    dos2unix ./Compra/comprar.sh
+    chmod +x ./Compra/comprar.sh
+    chmod +x ./Restauro/restaurarCp.sh
+    #git update-index --chmod=+x dar ao git as permissões no ficheiro.
+}
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ../Controller/Compras/compra.sh ../../MarketplaceCars/wwwcars.txt
+    ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 #============ Chamar o ficheiro de Venda ============
@@ -83,12 +89,18 @@ Venda(){
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
 Visualizar_Automoveis (){
-    Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    chmod +x ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    chmod +r Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    chmod +r Visualizar_Automovel/texbox_v.sh
+
+    ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
 Visualizar_Automoveis_por_Criterio  (){
-    Visualizar_Automovel/por_criterio.sh
+    chmod +x ./Visualizar_Automovel/por_criterio.sh
+
+    ./Visualizar_Automovel/por_criterio.sh
 }
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){
@@ -109,7 +121,7 @@ break(){
 function Main(){
 
     menu=$(
-        dialog --stdout --title 'Menu Inicial' --menu 'Escolhe uma opção' \
+        dialog --stdout --title 'Menu Inicial' --menu 'Escolha uma opção' \
                 0 0 0                             \
                 1 'Compra'                        \
                 2 'Venda'                         \
@@ -135,5 +147,10 @@ function Main(){
          0) break ;;
     esac
 }
+<<<<<<< HEAD
 Main " "
 >>>>>>> 65895b20c9b9c0dfc1fbe1850eb32409200850e1:App/Views/main.sh
+=======
+perm " "
+Main " "
+>>>>>>> 44e5739ae5053dbc3fdded000a6dc1f7d1eeaade
