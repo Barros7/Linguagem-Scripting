@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/bin/bash
 clear #limpa o menu anterior.
 
@@ -29,6 +30,8 @@ function comprar(){
 }
 
 =======
+=======
+>>>>>>> 6b7dfadfdcf73ac5e9471c22f204f3d14d299c9a
 #!/bin/bash
 clear #limpa o menu anterior.
 
@@ -58,5 +61,8 @@ function comprar(){
     read dataCompra )
 }
 
+<<<<<<< HEAD
 >>>>>>> 44e5739ae5053dbc3fdded000a6dc1f7d1eeaade
+=======
+>>>>>>> 6b7dfadfdcf73ac5e9471c22f204f3d14d299c9a
 comprar " "

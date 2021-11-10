@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+Carros_Comprados(){
+
+}
+
+Carros_vendidos(){
+
+
+}
+
 #============ Função para  Sair do programa ============
 break(){
    

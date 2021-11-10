@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
-function convert_DOS2UNIX(){
-    dos2unix -b ./relatorio.sh
-}
-
 #============ Chamar o ficheiro de LVC ============
 L_v_c(){
-    ../L_v_c/Lvc.sh
+    ./L_v_c/Lvc.sh
 }
 
 #============ Chamar o ficheiro de LVV ============
@@ -65,8 +61,7 @@ Sair(){
                 5 'Numero de veiculos vendido'    \
                 6 'Veiculo mais antigo em stock'  \
                 7 'Total lucros'                  \
-                0 'Sair'   
-                 
+                0 'Sair'                   
         )
 
     [ $? -ne 0 ] && break
@@ -80,8 +75,4 @@ Sair(){
          6) V_a_s ;;
          7) T_l ;;
          0) break ;;
-
-
     esac
-    #convert file DOS2UNIX
-    convert_DOS2UNIX ""
