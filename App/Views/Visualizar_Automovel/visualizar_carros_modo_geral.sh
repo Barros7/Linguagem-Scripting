@@ -3,15 +3,17 @@
 #============ Função para  Sair do programa ============
 
 Carros_Comprados (){
- chmod +x ./texbox_v_comprado.sh
-./texbox_v_comprado.sh
+    pwd
+ chmod +x ./Visualizar_Automovel/texbox_v_comprado.sh
+./Visualizar_Automovel/texbox_v_comprado.sh
 }
 
 Carros_vendidos (){
- chmod +x ./texbox_v_vendido.sh
-./texbox_v_vendido.sh
+    pwd
+ chmod +x ./Visualizar_Automovel/texbox_v_vendido.sh
+./Visualizar_Automovel/texbox_v_vendido.sh
 }
-
+pwd
 break(){
  clear
  #/home/jesus/Documents/Linguagem-Scripting/App/main.sh

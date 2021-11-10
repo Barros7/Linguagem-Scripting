@@ -8,7 +8,11 @@ perm(){
 
 #============ Chamar o ficheiro de Compra ============
 Compra(){
-    ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
+    pwd
+    chmod +x ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
+    ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
+    #chmod +x ../Views/Compra/comprar_automoveis.sh 
+    #../Views/Compra/comprar_automoveis.sh 
 }
 
 #============ Chamar o ficheiro de Venda ============
@@ -27,9 +31,11 @@ Visualizar_Automoveis (){
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
 Visualizar_Automoveis_por_Criterio  (){
-    chmod +x ./Visualizar_Automovel/por_criterio.sh
+     chmod +x ./Visualizar_Automovel/por_criterios.sh
+    chmod +x ./Visualizar_Automovel/por_criterios.sh
+    chmod 777 Visualizar_Automovel/texbox_v.sh
 
-    ./Visualizar_Automovel/por_criterio.sh
+    ./Visualizar_Automovel/por_criterios.sh
 }
 #============ Chamar o ficheiro de Base de Dados ============
 SGBD(){

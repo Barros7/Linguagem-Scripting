@@ -7,7 +7,7 @@
 #/home/jesus/Documents/Linguagem-Scripting/App/main.sh
 #}
 
-#============ Função visualizar Automóveis por criterio / comprados ============
+#============ Função visualizar Automóveis por criterio / vendidos ============
 
 function Matricula(){
     Matricula=$(dialog --stdout --inputbox 'Introduz a matrícula, se faz favor:' \
@@ -52,7 +52,7 @@ function Tipo(){
 #}
 
 menu=$(
-    dialog --stdout --title 'Comprados' --menu 'Visualizar por Criterio:' \
+    dialog --stdout --title 'Vendidos' --menu 'Visualizar por Criterio:' \
                 0 0 0               \
                 1 'Matrícula'       \
                 2 'Marca'           \
