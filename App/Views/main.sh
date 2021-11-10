@@ -17,7 +17,9 @@ Compra(){
 
 #============ Chamar o ficheiro de Venda ============
 Venda(){
-    ../Controller/Venda/venda.sh
+
+    chmod +x ./Venda/vendas.sh /SGBD
+    ./Venda/vendas.sh /SGBD
 }
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
