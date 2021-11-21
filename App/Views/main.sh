@@ -9,7 +9,7 @@ perm(){
 #============ Chamar o ficheiro de Compra ============
 Compra(){
     pwd
-    chmod +x ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
+    chmod +x ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
     ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
     #chmod +x ../Views/Compra/comprar_automoveis.sh 
     #../Views/Compra/comprar_automoveis.sh 
@@ -18,8 +18,10 @@ Compra(){
 #============ Chamar o ficheiro de Venda ============
 Venda(){
 
-    chmod +x ./Venda/vendas.sh /SGBD
-    ./Venda/vendas.sh /SGBD
+    chmod +x ./Venda/vendas.sh ./SGBD/stock.txt
+    ./Venda/vendas.sh ./SGBD/stock.txt
+    #chmod +x ./Venda/vendas.sh ../../SGBD/stock.txt
+    #./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============

@@ -4,8 +4,11 @@
 
 Carros_Comprados (){
     pwd
- chmod +x ./Visualizar_Automovel/texbox_v_comprado.sh
-./Visualizar_Automovel/texbox_v_comprado.sh
+    chmod +x ./texbox_v_comprado.sh #./SGBD/automoveis_comprados.txt
+    ./texbox_v_comprado.sh #../SGBD/automoveis_comprados.txt
+
+    #chmod +x ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
+    #./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 Carros_vendidos (){

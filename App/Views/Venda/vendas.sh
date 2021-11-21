@@ -1,34 +1,33 @@
-#!/bin/bash
-
-function venderCarro(){
+!/bin/bash
+    filename="$1"
+    tags=()
     
-    dos2unix ./venda.sh
-    chmod +x ./venda.sh
-    VENDA=$(dialog --title "Compras de Automoveis" \
-    --form "\n Caro Cliente: Indica os dados do automovel que deseja comprar" 25 46 16 \
-    "Marca:     " 1 1 "MARCA:     " 1 15 25 30  \
-    "Modelo:    " 2 1 "MODELO:    " 2 15 25 30  \
-    "Matrícula: " 3 1 "MATRICULA: " 3 15 25 30  \
-    "Tipo:      " 4 1 "TIPO:      " 4 15 25 30  \
-    "Preço:     " 5 1 "PREÇO:     " 5 15 25 30  \
-    "Ano:       " 6 1 "ANO:       " 6 15 25 30  \
-    "Restauro:  " 7 1 "RESTAURO:  " 7 15 25 30  > /tmp/out.tmp \
-    2>&1 >/dev/tty
+    while read -r tag;
+        do
+            tags+=("${tag} off")
+        done < "$filename"
 
-    marca=`sed -n 1p /tmp/out.tmp`
-    modelo=`sed -n 2p /tmp/out.tmp`
-    matricula=`sed -n 3p /tmp/out.tmp`
-    tipo=`sed -n 4p /tmp/out.tmp`
-    preco=`sed -n 5p /tmp/out.tmp`
-    ano=`sed -n 6p /tmp/out.tmp`
-    restauro=`sed -n 7p /tmp/out.tmp`
+             VENDA=$(dialog --stdout --no-items --checklist "VENDER AUTÓVEIS A CLIENTES:" 0 0 ${#tags[@]} ${tags[@]})
 
-    rm -f /tmp/out.tmp
-                                                                chmod +x ../SGBD/automoveis_vendidos.txt
-    echo $marca:$modelo:$matricula:$tipo:$preco:$ano:$restauro: >> ../SGBD/automoveis_vendidos.txt
 
+
+
+
+#============ MENSAGEM DE COMPRA DE AUTOMÓVEIS =======INÍCIO=======#
+    dialog --ok-label "Concluír compra" --title "Acabou de escolher o seguinte Automovel: " --msgbox "$VENDA" 0 0
+    dialog --msgbox 'VENDA REALIZADA COM SUCESSO. OBRIGADO POR REALIZAR A VENDA!' 5 40
+
+#============ MENSAGEM DE COMPRA DE AUTOMÓVEIS =======FIM=======#
+
+
+#============ GURADAR A COMPRA EM STOK DE AUTOMÓVEIS =======INÍCIO=======#
+    pwd
+    chmod +x ./SGBD/automoveis_vendidos.txt
+    echo $VENDA >> ./SGBD/automoveis_vendidos.txt
+    while [ -z "$LOJA=0" ]
+        do 
+        VENDA=$(dialog --msgbox "NENHUMA COMPRA IDENTIFICADA, FAÇA UMA COMPRA  SE FAZ FAVOR, OU CLICA CANCELAR:" 0 0  )
+        done
+            
+#============ GURADAR A COMPRA EM STOK DE AUTOMÓVEIS =======INÍCIO=======#
     
-    )
-    
-}
-venderCarro ""
