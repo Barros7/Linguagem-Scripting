@@ -50,10 +50,8 @@
 
 #============ GURADAR A COMPRA EM STOK DE AUTOMÓVEIS =======INÍCIO=======#
     pwd
-    chmod +x ./SGBD/stock.txt
-    chmod +x ./SGBD/automoveis_comprados.txt
-    echo $LOJA:QUANTIDADE:$qtdCarro:PREÇO_VENDA:$precoVenda:€:PREÇO_RESTAURO:$precorestauro:€  >> ./SGBD/stock.txt
-    echo $LOJA:QUANTIDADE:$qtdCarro:PREÇO_VENDA:$precoVenda:€:PREÇO_RESTAURO:$precorestauro:€  >> ./SGBD/automoveis_comprados.txt
+    echo $LOJA:QUANTIDADE:$qtdCarro:PREÇO_VENDA:$precoVenda:€:PREÇO_RESTAURO:$precorestauro:€  >> ./stock.txt
+    echo $LOJA:QUANTIDADE:$qtdCarro:PREÇO_VENDA:$precoVenda:€:PREÇO_RESTAURO:$precorestauro:€  >> ./automoveis_comprados.txt
     while [ -z "$LOJA=0" ]
         do 
         LOJA=$(dialog --msgbox "NENHUMA COMPRA IDENTIFICADA, FAÇA UMA COMPRA  SE FAZ FAVOR, OU CLICA CANCELAR:" 0 0  )
