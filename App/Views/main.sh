@@ -7,7 +7,7 @@ function Config(){
 
 #============ Chamar o ficheiro de Compra ============
 function Compra(){
-    ./compra.sh ../MarketplaceCars/wwwcars.txt
+    ./compra.sh ../../MarketplaceCars/wwwcars.txt
 
 }
 
@@ -24,6 +24,10 @@ function Visualizar_Automoveis (){
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
 function Visualizar_Automoveis_por_Criterio  (){
     ./por_criterios.sh
+}
+
+function Alterar_Dados(){
+    ./alterar_dado.sh
 }
 
 #============ Chamar o ficheiro Relatorios ============
@@ -54,12 +58,11 @@ function Main(){
                 0 0 0                                  \
                 1 'Compra'                                \
                 2 'Venda'                              \
-                3 'Atualizar Preço de Restauro'        \
-                4 'Visualizar Automoveis'              \
-                5 'Visualizar Automoveis por Criterio' \
-                6 'Alterar Dados'                 \
-                7 'Gestão de Base de Dados'       \
-                8 'Relatórios'                    
+                3 'Visualizar Automoveis'              \
+                4 'Visualizar Automoveis por Criterio' \
+                5 'Alterar Dados'                 \
+                6 'Gestão de Base de Dados'       \
+                7 'Relatórios'                    
         )
     [ $? -ne 0 ] && break
 
@@ -67,12 +70,11 @@ function Main(){
 
          1) Compra ;;
          2) Venda ;;
-         3) Atualizar_Preco_de_Restauro ;;
-         4) Visualizar_Automoveis ;;
-         5) Visualizar_Automoveis_por_Criterio ;;
-         6) Alterar_Dados ;;
-         7) SGBD ;;
-         8) Relatorios ;;
+         3) Visualizar_Automoveis ;;
+         4) Visualizar_Automoveis_por_Criterio ;;
+         5) Alterar_Dados ;;
+         6) SGBD ;;
+         7) Relatorios ;;
          0) break ;;
     esac
 }

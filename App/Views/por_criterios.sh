@@ -9,6 +9,10 @@ function Carros_vendidos(){
    ./por_criterio_vendido.sh
 }
 
+function Carros_em_Stock(){
+    ./por_criterio_stock.sh
+}
+
 function Voltar(){
     ./main.sh
 }

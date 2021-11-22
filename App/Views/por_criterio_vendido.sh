@@ -1,53 +1,66 @@
 #!/bin/bash
 
-#============ Função visualizar Automóveis por criterio / vendidos ============
+#============ Função visualizar Automóveis por criterio / comprados ============
 
-function Matricula(){
-    Matricula=$(dialog --stdout --inputbox 'Introduz a matrícula, se faz favor:' \
+function Tipo_automovel(){
+    Tipo=$(dialog --stdout --inputbox 'Introduz o tipo de automóvel:' \
     0 0 \
     )
-    read Matricula
+    grep $Tipo ../Models/../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
+    echo $Tipo
 }
 
 function Marca(){
-    Marca=$(dialog --stdout --inputbox 'Introduz a marca, se faz favor:' \
+    Marca=$(dialog --stdout --inputbox 'Introduz a marca:' \
     0 0 \
     )
-    read Marca
+    grep $Marca ../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
 }
 
+function Matricula(){
+    Matricula=$(dialog --stdout --inputbox 'Introduz a matrícula:' \
+    0 0 \
+    )
+    grep $Matricula ../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
+}
 
 function Modelo(){
-    Modelo=$(dialog --stdout --inputbox 'Introduz o modelo, se faz favor:' \
+    Modelo=$(dialog --stdout --inputbox 'Introduz o modelo:' \
     0 0 \
     )
-    read Modelo
+    grep $Modelo ../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
 }
 
-function Ano(){
-    Ano=$(dialog --stdout --inputbox 'Introduz o ano, se faz favor:' \
+function Ano_de_fabrico(){
+    Ano_de_fabrico=$(dialog --stdout --inputbox 'Introduz o ano de fabrico:' \
     0 0 \
     )
-    read Ano
+    grep $Ano_de_fabrico ../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
 }
 
-function Tipo(){
-    Tipo=$(dialog --stdout --inputbox 'Introduz o tipo, se faz favor:' \
+function Preco_da_compra(){
+    Preco_da_compra=$(dialog --stdout --inputbox 'Introduz o preço da compra:' \
     0 0 \
     )
-    read Tipo
+    grep $Preco_da_compra ../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
 }
 
-function Voltar(){
-    ./por_criterios.sh
+function preco_de_restauro(){
+    preco_de_restauro=$(dialog --stdout --inputbox 'Introduz o preço de restauro:' \
+    0 0 \
+    )
+    grep $preco_de_restauro ../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
 }
 
-function break(){
-    clear    
+function Data_da_compra(){
+    Data_da_compra=$(dialog --stdout --inputbox 'Introduz a data da compra:' \
+    0 0 \
+    )
+    grep $Data_da_compra ../Models/automoveis_vendidos.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
 }
 
 menu=$(
-    dialog --stdout --title 'Vendidos' --menu 'Visualizar por Criterio:' \
+    dialog --stdout --title 'Comprados' --menu 'Visualizar por Criterio:' \
                 0 0 0               \
                 1 'Matrícula'       \
                 2 'Marca'           \
