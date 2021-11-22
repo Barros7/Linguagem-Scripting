@@ -3,15 +3,16 @@
 #============ Função para  Sair do programa ============
 
 function Carros_Comprados (){
-    ./texbox_v_comprado.sh #../SGBD/automoveis_comprados.txt
+    ./textbox_v_comprado.sh 
+    #../SGBD/automoveis_comprados.txt
 }
 
 function Carros_vendidos (){
-    ./texbox_v_vendido.sh
+    ./textbox_v_vendido.sh
 }
 
 function Carros_Stock(){
-    ./Carros_Stock.sh
+    ./textbox_v_stock.sh
 }
 
 function Voltar(){
@@ -40,7 +41,7 @@ function Main(){
 
          1) Carros_Comprados ;;
          2) Carros_vendidos ;;
-         3) Carros_em_Stock ;;
+         3) Carros_Stock ;;
          4) Voltar ;;
          0) break ;;
     esac
