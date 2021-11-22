@@ -38,11 +38,13 @@ function Tipo(){
     read Tipo
 }
 
-#function break(){
-    #clear
-   # exit
-    
-#}
+function Voltar(){
+    ./por_criterios.sh
+}
+
+function break(){
+    clear    
+}
 
 menu=$(
     dialog --stdout --title 'Vendidos' --menu 'Visualizar por Criterio:' \
@@ -52,7 +54,7 @@ menu=$(
                 3 'Modelo'          \
                 4 'Ano'             \
                 5 'Tipo'            \
-               # 0 'Voltar'          \                  
+                6 '<- Voltar'                         
         )
     
 [ $? -ne 0 ] && break
@@ -62,5 +64,6 @@ menu=$(
          3) Modelo ;;
          4) Ano ;;
          5) Tipo_automovel ;;
-         #0) break ;;
+         6) Voltar ;;
+         0) break ;;
     esac

@@ -10,6 +10,10 @@ function Carros_vendidos (){
     ./Visualizar_Automovel/texbox_v_vendido.sh
 }
 
+function Carros_Stock(){
+    ./Carros_Stock.sh
+}
+
 function Voltar(){
     ./main.sh
 }
