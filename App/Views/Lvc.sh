@@ -1,8 +1,5 @@
 #!/bin/bash
 
-function Voltar(){
-    ../Relatorios/relatorio.sh
-}
 function Tipo_automovel(){
     Tipo=$(dialog --stdout --inputbox 'Introduz o tipo de automóvel:' \
     0 0 \
@@ -59,6 +56,15 @@ function Data_da_compra(){
     )
     grep $Data_da_compra oi.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
 }
+
+function Voltar(){
+    ./relatorio.sh
+}
+
+function break(){
+    clear
+}
+
 menu=$(
     dialog --stdout --title 'Relatorio' --menu 'Pesquisar por: ' \
                 0 0 0 \
@@ -70,7 +76,7 @@ menu=$(
                 6 'Preço da compra'                         \
                 7 'Preço de restauro'                         \
                 8 'Data da compra'                         \
-                9 'Voltar'                         
+                9 '<- Voltar'                         
         )  
 
 [ $? -ne 0 ] &&  break

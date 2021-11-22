@@ -7,7 +7,7 @@ function Carros_Comprados (){
 }
 
 function Carros_vendidos (){
-    ./Visualizar_Automovel/texbox_v_vendido.sh
+    ./texbox_v_vendido.sh
 }
 
 function Carros_Stock(){
