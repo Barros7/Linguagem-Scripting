@@ -31,8 +31,7 @@ function break(){
                 1 'Criar backup'                      \
                 2 'Restaurar uma cópia de segurança'  \
                 3 'Eliminar backup'                   \
-                4 '<- Voltar'                         \
-                0 'Sair' 
+                4 '<- Voltar'                         
         )
 
     [ $? -ne 0 ] && break

@@ -21,9 +21,7 @@
 
 
 #============ GURADAR A COMPRA EM STOK DE AUTOMÓVEIS =======INÍCIO=======#
-    pwd
-    chmod +x ./SGBD/automoveis_vendidos.txt
-    echo $VENDA >> ./SGBD/automoveis_vendidos.txt
+    echo $VENDA >> ./automoveis_vendidos.txt
     while [ -z "$LOJA=0" ]
         do 
         VENDA=$(dialog --msgbox "NENHUMA COMPRA IDENTIFICADA, FAÇA UMA COMPRA  SE FAZ FAVOR, OU CLICA CANCELAR:" 0 0  )

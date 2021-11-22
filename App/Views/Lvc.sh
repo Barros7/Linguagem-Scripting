@@ -4,7 +4,7 @@ function Tipo_automovel(){
     Tipo=$(dialog --stdout --inputbox 'Introduz o tipo de automóvel:' \
     0 0 \
     )
-    grep $Tipo oi.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
+    grep $Tipo ../Models/oi.txt | awk -F '|' ' {print NR")" $1 ":" $2 "|" $3 ":" $4 "|" $5 ":" $6 "|" $7 ":" $8 "|" $9 ":" $10 "|" $11 ":" $12 "|" $13 ":" $14 "|" $15 ":" $16}'
     echo $Tipo
 }
 
