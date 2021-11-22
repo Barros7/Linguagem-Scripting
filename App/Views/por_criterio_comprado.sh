@@ -1,13 +1,6 @@
 #!/bin/bash
 
-#============ Função para  Sair do programa ============
-#break(){
-#clear #===== Limpa a escolha anterior ==========================
-   
-#/home/jesus/Documents/Linguagem-Scripting/App/main.sh
-#}
-
-#============ Função visualizar Automóveis por criterio / vendidos ============
+#============ Função visualizar Automóveis por criterio / comprados ============
 
 function Matricula(){
     Matricula=$(dialog --stdout --inputbox 'Introduz a matrícula, se faz favor:' \
@@ -45,21 +38,23 @@ function Tipo(){
     read Tipo
 }
 
-#function break(){
-    #clear
-   # exit
-    
-#}
+function Voltar(){
+    ./por_criterios.sh
+}
+
+function break(){
+    clear   
+}
 
 menu=$(
-    dialog --stdout --title 'Vendidos' --menu 'Visualizar por Criterio:' \
+    dialog --stdout --title 'Comprados' --menu 'Visualizar por Criterio:' \
                 0 0 0               \
                 1 'Matrícula'       \
                 2 'Marca'           \
                 3 'Modelo'          \
                 4 'Ano'             \
                 5 'Tipo'            \
-               # 0 'Voltar'          \                  
+                6 '<- Voltar'                         
         )
     
 [ $? -ne 0 ] && break
@@ -69,5 +64,6 @@ menu=$(
          3) Modelo ;;
          4) Ano ;;
          5) Tipo_automovel ;;
-         #0) break ;;
+         6) Voltar ;;
+         0) break ;;
     esac

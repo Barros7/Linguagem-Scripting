@@ -1,51 +1,47 @@
 #!/usr/bin/env bash
 
 #============ Chamar o ficheiro de LVC ============
-L_v_c(){
-    ./L_v_c/Lvc.sh
+function L_v_c(){
+    ./Lvc.sh
 }
 
 #============ Chamar o ficheiro de LVV ============
-L_v_v(){
-    chmod +x ../L_v_v/Lvv.sh 
-    ../L_v_v/Lvv.sh
+function L_v_v(){
+    ./Lvv.sh
     }
 
 #============ Chamar o ficheiro de LVS ============
-L_v_s(){
-    chmod +x ../L_v_s/Lvs.sh
-    ../L_v_s/Lvs.sh
+function L_v_s(){
+    ./Lvs.sh
     }
 
 #============ Chamar o ficheiro de NVS ============
-N_v_s(){
-    chmod +x ../N_v_s/Nvs.sh
-    ../N_v_s/Nvs.sh
+function N_v_s(){
+    ./Nvs.sh
     }
 
 #============ Chamar o ficheiro de NVV ============
-N_v_v(){
-    chmod +x ../N_v_v/Nvv.sh
-    ../N_v_v/Nvv.sh
+function N_v_v(){
+    ./Nvv.sh
     }
 
 #============ Chamar o ficheiro de VAS ============
-V_a_s(){
-    chmod +x ../V_a_s/Nas.sh
-    ../V_a_s/Vas.sh
+function V_a_s(){
+    ./Vas.sh
     }
 
 #============ Chamar o ficheiro de VAS ============
-T_l(){
-    chmod +x ../T_l/Tl.sh
-    ../T_l/Tl.sh
+function T_l(){
+    ./Tl.sh
     }
 
+function Voltar(){
+    ./main.sh
+}
 
 #============ Função para  Sair do programa ============
-Sair(){
+function break(){
     clear
-    exit
 }
 
 #============ Função do Menu_Iniciar ==============
@@ -61,7 +57,7 @@ Sair(){
                 5 'Numero de veiculos vendido'    \
                 6 'Veiculo mais antigo em stock'  \
                 7 'Total lucros'                  \
-                0 'Sair'                   
+                8 '<- Voltar'                   
         )
 
     [ $? -ne 0 ] && break
@@ -74,5 +70,6 @@ Sair(){
          5) N_v_v ;;
          6) V_a_s ;;
          7) T_l ;;
+         8) Voltar ;;
          0) break ;;
     esac

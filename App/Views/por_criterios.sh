@@ -1,25 +1,21 @@
 #!/bin/bash
 
 
-Carros_Comprados(){
-    pwd
-    
-    chmod +x ./Visualizar_Automovel/por_criterio_comprado.sh
-
-     ./Visualizar_Automovel/por_criterio_comprado.sh
+function Carros_Comprados(){
+     ./por_criterio_comprado.sh
 }
 
-Carros_vendidos(){
-    pwd
+function Carros_vendidos(){
+   ./por_criterio_vendido.sh
+}
 
-  chmod +x ./Visualizar_Automovel/por_criterio_vendido.sh
-   ./Visualizar_Automovel/por_criterio_vendido.sh
+function Voltar(){
+    ./main.sh
 }
 
 #============ Função para  Sair do programa ============
-break(){
-   
-/home/jesus/Documents/Linguagem-Scripting/App/main.sh
+function break(){
+    clear 
 }
 
 #============ Função visualizar carros por criterio ============
@@ -31,7 +27,7 @@ function Main(){
                 1 'Carros Comprados' \
                 2 'Carros Vendidos'  \
                 3 'Carros em Stock'  \
-                0 'Sair'
+                4 '<- Voltar'
         )
     [ $? -ne 0 ] && break
 
@@ -40,6 +36,7 @@ function Main(){
          1) Carros_Comprados ;;
          2) Carros_vendidos ;;
          3) Carros_em_Stock ;;
+         4) Voltar ;;
          0) break ;;
     esac
 }

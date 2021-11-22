@@ -1,13 +1,17 @@
 #!/bin/bash
 function Voltar(){
-    ../Relatorios/relatorio.sh
+    ./relatorio.sh
+}
+
+function break(){
+    clear
 }
 
 menu=$(
     dialog --stdout --title 'Relatorio' --menu 'Total Lucros' \
                 0 0 0 \
                 1 'Vizualizar lucros'                         \
-                2 'Voltar' 
+                2 '<- Voltar' 
         )
     
     [ $? -ne 0 ] && break

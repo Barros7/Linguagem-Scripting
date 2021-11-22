@@ -1,58 +1,39 @@
 #!/bin/bash
 
-#============ Função para configuração dos ficheiros
+#============ Função para configuração dos ficheiros (convert dos2unix and permission all files)
 function Config(){
-    chmod +x ../Controllers/functions/*.sh
-    chmod +x ../Views/*.sh
-    dos2unix ../Views/*.sh
+    ../Controllers/functions/config.sh
 }
 
 #============ Chamar o ficheiro de Compra ============
 function Compra(){
-    pwd
-    chmod +x ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
-    ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
-    #chmod +x ../Views/Compra/comprar_automoveis.sh 
-    #../Views/Compra/comprar_automoveis.sh 
+    ./compra.sh ../MarketplaceCars/wwwcars.txt
+
 }
 
 #============ Chamar o ficheiro de Venda ============
 function Venda(){
-
-    chmod +x ./Venda/vendas.sh ./SGBD/stock.txt
-    ./Venda/vendas.sh ./SGBD/stock.txt
-    #chmod +x ./Venda/vendas.sh ../../SGBD/stock.txt
-    #./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
+    ./vendas.sh ./stock.txt
 }
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
 function Visualizar_Automoveis (){
-    chmod +x ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
-    chmod 777 Visualizar_Automovel/visualizar_carros_modo_geral.sh
-    chmod 777 Visualizar_Automovel/texbox_v.sh
-
-    ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
+    ./visualizar_carros_modo_geral.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
 function Visualizar_Automoveis_por_Criterio  (){
-     chmod +x ./Visualizar_Automovel/por_criterios.sh
-    chmod +x ./Visualizar_Automovel/por_criterios.sh
-    chmod 777 Visualizar_Automovel/texbox_v.sh
-
-    ./Visualizar_Automovel/por_criterios.sh
+    ./por_criterios.sh
 }
 
 #============ Chamar o ficheiro Relatorios ============
 function Relatorios(){
-    chmod +x ./Relatorios/relatorio.sh
-
-    ./Relatorios/relatorio.sh
+    ./relatorio.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
 function SGBD(){
-    ./SGBD/base_de_dados.sh
+    ./base_de_dados.sh
     }
 
 #============ Chamar o ficheiro de Backup ============

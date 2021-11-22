@@ -5,16 +5,24 @@ function CriarBk(){
     ../Controllers/functions/criarBk.sh
 }
 
+#Executa o ficheiro de restauro
 function RestaurarCpS(){
-    ./Restauro/restaurarCp.sh
+    ./restaurarCp.sh
 }
 
+#Executa o ficheiro para eliminar backup
+function EliminarBk(){
+    ../Controllers/functions/eliminar_backup.sh
+}
+
+#Volta ao menu principal
 function Voltar(){
     ./main.sh
 }
 
-#Função para a Gestão de Base de Dados
-clear
+function break(){
+    clear
+}
     menu=$(
         dialog --stdout                               \
                 --title 'Gestão de Base Dados'        \
