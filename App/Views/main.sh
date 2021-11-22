@@ -1,23 +1,24 @@
 #!/bin/bash
-perm(){
-    dos2unix ./Compra/comprar.sh
-    chmod +x ./Compra/comprar.sh
-    chmod +x ./Restauro/restaurarCp.sh
-    #git update-index --chmod=+x dar ao git as permissões no ficheiro.
+
+#============ Função para configuração dos ficheiros
+function Config(){
+    chmod +x ../Controllers/functions/*.sh
+    chmod +x ../Views/*.sh
+    dos2unix ../Views/*.sh
 }
 
 #============ Chamar o ficheiro de Compra ============
-Compra(){
+function Compra(){
     ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 #============ Chamar o ficheiro de Venda ============
-Venda(){
+function Venda(){
     ../Controller/Venda/venda.sh
 }
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
-Visualizar_Automoveis (){
+function Visualizar_Automoveis (){
     chmod +x ./Visualizar_Automovel/visualizar_carros_modo_geral.sh
     chmod 777 Visualizar_Automovel/visualizar_carros_modo_geral.sh
     chmod 777 Visualizar_Automovel/texbox_v.sh
@@ -26,31 +27,30 @@ Visualizar_Automoveis (){
 }
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
-Visualizar_Automoveis_por_Criterio  (){
-    chmod +x ./Visualizar_Automovel/por_criterio.sh
+function Visualizar_Automoveis_por_Criterio  (){
 
     ./Visualizar_Automovel/por_criterio.sh
 }
 
 #============ Chamar o ficheiro Relatorios ============
-Relatorios(){
+function Relatorios(){
     chmod +x ./Relatorios/relatorio.sh
 
     ./Relatorios/relatorio.sh
 }
 
 #============ Chamar o ficheiro de Base de Dados ============
-SGBD(){
+function SGBD(){
     ./SGBD/base_de_dados.sh
     }
 
 #============ Chamar o ficheiro de Backup ============
-Backups(){
+function Backups(){
     ./Backups/backup.sh
     }
 
 #============ Função para  Sair do programa e limpar a tela ============
-break(){
+function break(){
     clear
 }
 
@@ -59,11 +59,11 @@ function Main(){
 
     menu=$(
         dialog --stdout --title 'Menu Inicial' --menu 'Escolha uma opção' \
-                0 0 0                             \
-                1 'Compra'                        \
-                2 'Venda'                         \
-                3 'Atualizar Preço de Restauro'   \
-                4 'Visualizar Automoveis'         \
+                0 0 0                                  \
+                1 'Compra'                                \
+                2 'Venda'                              \
+                3 'Atualizar Preço de Restauro'        \
+                4 'Visualizar Automoveis'              \
                 5 'Visualizar Automoveis por Criterio' \
                 6 'Alterar Dados'                 \
                 7 'Gestão de Base de Dados'       \
@@ -84,4 +84,5 @@ function Main(){
          0) break ;;
     esac
 }
+Config ""
 Main ""
