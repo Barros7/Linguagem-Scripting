@@ -9,12 +9,20 @@ function Config(){
 
 #============ Chamar o ficheiro de Compra ============
 function Compra(){
-    ./Compra/comprar.sh ../../MarketplaceCars/wwwcars.txt
+    pwd
+    chmod +x ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
+    ./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
+    #chmod +x ../Views/Compra/comprar_automoveis.sh 
+    #../Views/Compra/comprar_automoveis.sh 
 }
 
 #============ Chamar o ficheiro de Venda ============
 function Venda(){
-    ../Controller/Venda/venda.sh
+
+    chmod +x ./Venda/vendas.sh ./SGBD/stock.txt
+    ./Venda/vendas.sh ./SGBD/stock.txt
+    #chmod +x ./Venda/vendas.sh ../../SGBD/stock.txt
+    #./Compra/compra.sh ../../MarketplaceCars/wwwcars.txt
 }
 
 #============ Chamar o ficheiro visualizar automoveis modo geral ============
@@ -28,8 +36,11 @@ function Visualizar_Automoveis (){
 
 #============ Chamar o ficheiro visualizar automoveis por criterio ============
 function Visualizar_Automoveis_por_Criterio  (){
+     chmod +x ./Visualizar_Automovel/por_criterios.sh
+    chmod +x ./Visualizar_Automovel/por_criterios.sh
+    chmod 777 Visualizar_Automovel/texbox_v.sh
 
-    ./Visualizar_Automovel/por_criterio.sh
+    ./Visualizar_Automovel/por_criterios.sh
 }
 
 #============ Chamar o ficheiro Relatorios ============

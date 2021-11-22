@@ -7,9 +7,9 @@
 #}
 
 #============ Função visualizar carros modo geral ============
-        chmod +x Visualizar_Automovel/wwwcars.txt  
-        chmod +x ./wwwcars.txt         
-        ARQUIVO="./wwwcars.txt" 
+        pwd
+        chmod +x ./Visualizar_Automovel/texbox_v_comprado.sh ../SGBD/automoveis_comprados.txt        
+        ARQUIVO="./Visualizar_Automovel/texbox_v_comprado.sh ../SGBD/automoveis_comprados.txt" 
         dialog  --title "Automóveis Comprados " --textbox "$ARQUIVO" \
                 0 0 \
       
