@@ -2,7 +2,7 @@
 function CriarBk(){
     TIME=`date +%d-%m-%Y-%H.%M`             # Adicionar a data no Nome do Arquivo de Backup.
     FILENAME=Backup-$TIME.tar.gz            # Aqui eu defino o formato do nome do arquivo de backup.
-    SRCDIR=../Models/Database               # Local Fonte - onde estão os arquivos a serem feitos backup.
+    SRCDIR="../Models/"             # Local Fonte - onde estão os arquivos a serem feitos backup.
     DESDIR=../Models/Backup/                # Local Destino - onde o Backup será salvo.
     tar -cpzf $DESDIR/$FILENAME $SRCDIR
     if [ $? -eq 0 ]

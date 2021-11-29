@@ -96,7 +96,7 @@ menu=$(
          1) Matricula ;;
          2) Marca ;;
          3) Modelo ;;
-         4) Preco ;;
+         4) Preco_compra ;;
          4) Ano ;;
          5) Voltar ;;
          0) break ;;
